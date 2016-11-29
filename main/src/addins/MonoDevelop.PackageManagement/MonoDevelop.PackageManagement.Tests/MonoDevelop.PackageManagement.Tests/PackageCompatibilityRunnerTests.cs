@@ -49,6 +49,9 @@ namespace MonoDevelop.PackageManagement.Tests
 		[TestFixtureSetUp]
 		public void SetUp ()
 		{
+			string appDataFolder = Environment.GetFolderPath (Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify);
+			string dummyPath = Path.Combine (appDataFolder, "MonoDevelopPackageManagementTests");
+			Environment.SetEnvironmentVariable ("NuGetPortableReferenceAssemblyPath", dummyPath);
 			profileTable = NetPortableProfileTable.Instance;
 		}
 
