@@ -40,6 +40,14 @@ namespace MonoDevelop.PackageManagement.Tests
 		PackageCompatibility packageCompatibility;
 		FakeDotNetProject project;
 
+		NetPortableProfileTable profileTable;
+
+		[TestFixtureSetUp]
+		public void SetUp ()
+		{
+			profileTable = NetPortableProfileTable.Instance;
+		}
+
 		void CreateProject (string frameworkVersion)
 		{
 			project = new FakeDotNetProject ();

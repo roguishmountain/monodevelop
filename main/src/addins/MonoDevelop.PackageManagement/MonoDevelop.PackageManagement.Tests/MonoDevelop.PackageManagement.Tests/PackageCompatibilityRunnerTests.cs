@@ -44,6 +44,13 @@ namespace MonoDevelop.PackageManagement.Tests
 		FakeProgressMonitorFactory progressMonitorFactory;
 		PackageManagementEvents packageManagementEvents;
 		FakeProgressMonitor progressMonitor;
+		NetPortableProfileTable profileTable;
+
+		[TestFixtureSetUp]
+		public void SetUp ()
+		{
+			profileTable = NetPortableProfileTable.Instance;
+		}
 
 		void CreateRunner ()
 		{
