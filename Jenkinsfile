@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 timestamps {
-    node {
+    node('monodevelop') {
         stage('setup') {
                 checkout scm
         }
