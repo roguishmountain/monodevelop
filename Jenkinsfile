@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 timestamps {
-    node('ios-sim') {
+    node {
         stage('setup') {
                 checkout scm
         }
